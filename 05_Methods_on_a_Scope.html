@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Play</title>
+</head>
+<body>
+
+	<div ng-app="myApp">
+
+		<div ng-controller="FirstCtrlr">
+ 			One: <input type="text" ng-model="data.message"><br>
+ 			{{data.message}}<br>
+			{{reverseMessageRigid()}}<br>
+		</div>
+
+		<div ng-controller="SecondCtrlr">
+			Two: <input type="text" ng-model="data.message"><br>
+			{{data.message}}<br>
+			<!-- data.message is bindable so whenever this value changes, the function will be called -->
+			{{reverseMessageFlexible(data.message)}}<br>			
+		</div>
+		
+	</div>
+
+	<script src="angular.js"></script>
+	<script src="05_Methods_on_a_Scope.js"></script>
+</body>
+</html>

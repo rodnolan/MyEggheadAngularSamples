@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Play</title>
+	<script src="03_TheDot.js"></script>
+	<script src="angular.js"></script>
+</head>
+<body>
+
+	<div ng-app="">
+		Root: <input type="text" ng-model="data.message">
+		{{data.message}}
+		<div ng-controller="FirstCtrlr">
+ 			One: <input type="text" ng-model="data.message">
+ 			{{data.message}}
+		</div>
+		<div ng-controller="SecondCtrlr">
+			Two: <input type="text" ng-model="data.message">
+			{{data.message}}
+		</div>
+	</div>
+
+	<p>if the three models are complex expressions (data.message), then they are connected and they stay connected </p>
+
+	<p>if the model is a simple expression (message), the models of <em>one</em> and <em>two</em> seem to be bound to the same model in root only until those elements are filled themselves. Filling <em>one</em> seems to break the bond between it and its parent. Filling <em>two</em> seems to break the bond between it and its parent. So the model in each scope reads from its inherited scope until it's overwritten locally.</p>
+
+</body>
+</html>

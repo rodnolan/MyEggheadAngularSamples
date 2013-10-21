@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Play</title>
+</head>
+<body>
+
+	<div ng-app="myApp">
+
+		<div ng-controller="FirstCtrlr">
+ 			One: <input type="text" ng-model="data.message"><br>
+ 			{{data.message}}<br>
+		</div>
+
+		<div ng-controller="SecondCtrlr">
+			Two: <input type="text" ng-model="data.message"><br>
+			{{data.message}}<br>
+		</div>
+		
+	</div>
+
+	<script src="angular.js"></script>
+	<script src="04_Controllers_Sharing_Data.js"></script>
+</body>
+</html>

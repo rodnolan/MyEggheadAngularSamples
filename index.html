@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Play</title>
+	<link rel="stylesheet" type="text/css" href="foundation-min.css">
+</head>
+<body>
+	<div ng-app="superhero">
+		<input type="text" ng-model="hello">
+		{{hello}}
+
+		<!-- <superman spiderman></superman> -->
+		<div class="batman"></div>
+		<!-- directive:comment -->
+		<div enter="panel" leave myname="Rodney">hover over me right now</div>
+	</div>
+
+
+	<script src="angular.js"></script>
+	<script src="main.js"></script>
+<!-- 
+	<div ng-app="myApp">
+		<div ng-controller="AvengersCtrl">
+			<table>
+				<tr>
+					<td>
+						<label>name</label> 
+					</td>
+					<td colspan="3">
+						<input type="radio" ng-model="orderProp" value="name"> asc
+						<input type="radio" ng-model="orderProp" value="-name"> desc<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>age</label> 
+					</td>
+					<td colspan="3">
+						<input type="radio" ng-model="orderProp" value="age"> asc
+						<input type="radio" ng-model="orderProp" value="-age"> desc<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>gender</label> 
+					</td>
+					<td colspan="3">
+						<input type="radio" ng-model="orderProp" value="gender"> asc
+						<input type="radio" ng-model="orderProp" value="-gender"> desc
+					</td>
+				</tr>	
+				<tr>
+					<td>filter on any field</td>
+					<td colspan="3">
+						<input type="text" ng-model="search.$" placeholder="filter on any field">
+					</td>
+				</tr>
+				<tr>
+					<td>filter on specific field</td>
+					<td>
+						<input type="text" ng-model="search.name" placeholder="name">
+					</td>
+					<td>
+						<input type="text" ng-model="search.age" placeholder="age">
+					</td>
+					<td>
+						<input type="text" ng-model="search.gender" placeholder="gender">
+					</td>
+				</tr>
+				<tr ng-repeat="famMem in avengers.cast | orderBy:orderProp | filter:search">
+					<td></td>
+					<td>{{famMem.name | lowercase}}</td>
+					<td>{{famMem.age}}</td>
+					<td>{{famMem.gender | uppercase }}</td>
+				</tr>
+			</table>
+		</div>	
+	</div> -->
+		<!-- <input type="text" ng-model="data.message">
+		<h2>{{data.message}}</h2>
+
+		<div ng-controller="FirstCtrl">
+			<input type="text" ng-model="data.message">
+			<h2>{{data.message}}</h2>
+		</div>
+		<div ng-controller="SecondCtrl">
+			<input type="text" ng-model="data.message">
+			<h2>{{data.message | reverse}}</h2>
+		</div> -->	
+</body>
+</html>
