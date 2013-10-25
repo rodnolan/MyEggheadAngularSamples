@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Play</title>
+</head>
+<body>
+
+	<div ng-app="myApp">
+
+		<div ng-controller="ScopeMethods">
+			Method: <input type="text" ng-model="data.message"><br>
+			{{data.message}}<br>
+			<!-- data.message is bindable so whenever this value changes, the function will be called -->
+			{{reverseMessageFlexible(data.message)}}<br>
+			{{data.message|reverseMessageFilter}}<br>	
+		</div>
+
+		<h1>...and now for something completely different</h1>
+		<div ng-controller="Filters">
+			Filter: <input type="text" ng-model="data.filterMessage"><br>
+			{{data.filterMessage}}<br>
+			{{data.filterMessage|reverseMessageFilter}}<br>	
+			<!-- using the filter from a controller -->
+			<!-- No calling a method, no passing args -->
+		</div>
+		
+		<div ng-controller="Filters2">
+			Filter: <input type="text" ng-model="data.filterMessageDeux"><br>
+			{{data.filterMessageDeux}}<br>
+			{{data.filterMessageDeux|reverseMessageFilter}}<br>	
+			<!-- using the filter from another controller -->
+			<!-- wider scope, easily accessible -->
+		</div>
+	</div>
+
+	<script src="angular.js"></script>
+	<script src="06_Filters.js"></script>
+</body>
+</html>
