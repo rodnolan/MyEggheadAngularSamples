@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Play</title>
+	<link rel="stylesheet" type="text/css" href="foundation-min.css">
+</head>
+<body>
+
+<div ng-app="myApp">
+
+	<input type="text" ng-model="search.$">
+
+<!-- 
+	<input type="text" ng-model="search.name">
+	<input type="text" ng-model="search.character">
+	<input type="text" ng-model="search.nickname">
+ -->
+
+	<div ng-controller="AvengersCtrl">
+		<table>
+			<tr ng-repeat="actor in avengers.cast | filter:search">
+				<td>{{actor}}</td>
+<!-- 				
+				<td>{{actor.name}}</td>
+				<td>{{actor.character}}</td>
+				<td>{{actor.nickname}}</td>
+ -->				
+			</tr>
+		</table>
+	</div>
+</div>
+
+	<script src="angular.js"></script>
+	<script src="08_Repeat.js"></script>
+</body>
+</html>
